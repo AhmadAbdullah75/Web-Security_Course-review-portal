@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Courses</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">Course Review Portal <span class="tag">SAFE</span></div>
+    <div><a href="/dashboard">Dashboard</a> <a href="/logout">Logout</a></div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h1>Search Courses</h1>
+      <form method="GET" action="/search">
+        <input name="q" value="<%= q %>" placeholder="Search by course code...">
+        <button>Search</button>
+      </form>
+
+      <h2>Results for: <%= q %></h2>
+
+      <% if (error) { %><div class="error-msg"><%= error %></div><% } %>
+      <ul>
+        <% rows.forEach(r => { %>
+          <li><%= r.course %> — <%= r.author %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

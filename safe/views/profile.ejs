@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">Course Review Portal <span class="tag">SAFE</span></div>
+    <div><a href="/dashboard">Dashboard</a> <a href="/logout">Logout</a></div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h1>Profile: <%= username %></h1>
+      <div id="bio"></div>
+      <script>
+        document.getElementById('bio').textContent = decodeURIComponent(location.hash.slice(1));
+      </script>
+    </div>
+
+    <div class="card">
+      <h3>Update Email (CSRF protected)</h3>
+      <form method="POST" action="/update-email">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input name="email" placeholder="New email address">
+        <button>Update</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

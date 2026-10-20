@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">Course Review Portal <span class="tag">SAFE</span></div>
+    <div><a href="/logout">Logout</a></div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h1>Welcome, <%= username %></h1>
+      <p>Choose where you want to go:</p>
+      <div class="quick-links">
+        <a href="/search?q=CS">🔍 Search courses</a>
+        <a href="/course/CS101">📘 CS101 reviews</a>
+        <a href="/profile">👤 My profile</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

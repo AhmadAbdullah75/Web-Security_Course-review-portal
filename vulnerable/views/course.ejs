@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Reviews</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">Course Review Portal <span class="tag">VULNERABLE</span></div>
+    <div><a href="/dashboard">Dashboard</a> <a href="/logout">Logout</a></div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h1>Course: <%= course %></h1>
+      <h3>Reviews</h3>
+      <ul>
+        <% reviews.forEach(r => { %>
+          <li><b><%= r.author %>:</b> <%- r.comment %></li>
+        <% }) %>
+      </ul>
+
+      <form method="POST" action="/course/<%= course %>/review">
+        <textarea name="comment" placeholder="Write a review..."></textarea>
+        <button>Submit Review</button>
+      </form>
+      <div class="hint">
+        Stored XSS demo: submit a review with <code>&lt;script&gt;alert('stored')&lt;/script&gt;</code>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
